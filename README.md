@@ -13,36 +13,19 @@ Automated UI tests สำหรับ [React TodoMVC](https://todomvc.com/exampl
 | `robotframework-browser-batteries` | 21.x | มี Node.js และ Playwright มาในตัว ไม่ต้องลง Node.js เอง |
 | Chromium | - | browser ที่ใช้รัน test ติดตั้งผ่าน `rfbrowser` |
 
-## ติดตั้ง
+## ติดตั้ง (ทำครั้งแรกครั้งเดียว)
 
 ```bash
-python3 -m venv .venv
+git clone https://github.com/Nimsiri/todomvc-robot-tests.git
+cd todomvc-robot-tests
+python3 -m venv .venv           
 source .venv/bin/activate        # Windows: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 rfbrowser install chromium
 ```
 
-
 ## Run ทดสอบแบบไม่เปิด Browser
-```
-cd ~/Desktop/todomvc-robot-tests
-source .venv/bin/activate
+```bash
+source .venv/bin/activate        # ทำทุกครั้งที่เปิด terminal ใหม่
 robot --argumentfile robot.args tests
 ```
-## Run ทดสอบแบบเปิด Browser
-```
-robot --argumentfile robot.args --variable HEADLESS:False --variable SLOW_MO:0.5s tests
-```
-`SLOW_MO` หน่วงเวลาทุก action ให้ดูทัน ปรับได้ เช่น `1s` ถ้าใส่ `0s` จะรันเร็วปกติ
-
-## ดูผลการรัน
-
-ผลอยู่ในโฟลเดอร์ `results/`
-- `report.html` สรุปผล pass/fail
-- `log.html` รายละเอียดทีละ step
-
-```bash
-open results/report.html
-```
-
-
