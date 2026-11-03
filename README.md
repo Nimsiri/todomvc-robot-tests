@@ -24,7 +24,7 @@ pip install -r requirements.txt
 rfbrowser install chromium
 ```
 
-## Run ทดสอบแบบไม่เปิด Browser
+## Run ทดสอบ
 ```bash
 source .venv/bin/activate        # ทำทุกครั้งที่เปิด terminal ใหม่
 robot --argumentfile robot.args tests
