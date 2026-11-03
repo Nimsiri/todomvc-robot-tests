@@ -1,0 +1,6 @@
+# Default options for every run:
+#   robot --argumentfile robot.args tests
+--outputdir results
+--skiponfailure known-issue
+--loglevel INFO
+--name TodoMVC UI Tests

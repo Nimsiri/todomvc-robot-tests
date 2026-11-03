@@ -1,0 +1,6 @@
+# Browser library + BrowserBatteries (ships its own Node.js and Playwright,
+# so Node.js does not need to be installed on the machine).
+# The two packages must be on the same version line.
+robotframework>=7.3,<8
+robotframework-browser[bb]>=21.0.0,<22
+robotframework-browser-batteries>=21.0.0,<22

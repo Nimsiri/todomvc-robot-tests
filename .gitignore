@@ -1,0 +1,16 @@
+# Test results (generated on every run)
+results/
+browser/
+*.png
+playwright-log.txt
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
